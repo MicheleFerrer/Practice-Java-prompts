@@ -24,13 +24,27 @@ import java.util.Scanner;
     public static void main(String[] args){
         int length, width, area;
         Scanner myObj = new Scanner(System.in); // importing and defining the scanner object to read user input
+           
+        // I iwll add improvments in my code by impllementing error handiling to ensure positive integers. 
+        try {
             System.out.print("What is the length of rectangle: ");
             length = myObj.nextInt(); //read user input for length
-
+            if(length <= 0){
+                System.out.println("Length should be a positive number");
+                return;
+            }
             System.out.println("What is the width of the rectangle: ");
             width = myObj.nextInt();
 
+            if (width <= 0) {
+                System.out.println("Width should be a positive number.");
+                return;
+            }            
+
             area = length * width;
             System.out.println("The area of the rectangle is: " + area);
+            } catch (Exception e) {
+                System.out.println("Invalid input. Please enter a valid integer.");
+        }
     }
  }
