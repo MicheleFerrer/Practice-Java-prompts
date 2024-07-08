@@ -29,7 +29,7 @@ Iterate over the list and call the displayStudentDetails()
 method for each student to print their details.
 
 */
-import java.util.ArrayList:
+import java.util.ArrayList;
  class Second {
     
     //Private Instance Variables
@@ -82,6 +82,14 @@ import java.util.ArrayList:
 public class studentManagement{
     public static void main(String[] args) {
         // creating a list to store student objects
+        ArrayList<Second> student = new ArrayList<>();
+        student.add(new Second("Michele", "S01", 90.5));
+        student.add(new Second("Daniela","S02", 93));
+        student.add(new Second("Isabelle", "S03", 83));
+       for (Second second : student) {
+        student.displayStudentDetails();
+        System.out.println();
+       }
     }
 }
     
