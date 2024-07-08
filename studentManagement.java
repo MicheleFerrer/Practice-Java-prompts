@@ -29,9 +29,9 @@ Iterate over the list and call the displayStudentDetails()
 method for each student to print their details.
 
 */
-
-
-public class Second {
+import java.util.ArrayList:
+ class Second {
+    
     //Private Instance Variables
     private String name;
     private String studentID;
@@ -42,6 +42,12 @@ public class Second {
         this.name = name;
         this.studentID = studentID;
         this.grade = grade;
+    }
+
+    public Second(double grade, String name, String studentID) {
+        this.grade = grade;
+        this.name = name;
+        this.studentID = studentID;
     }
     // Getter Methods
     public String getName() {
@@ -65,7 +71,20 @@ public class Second {
         this.grade = grade;
     }
 
+    // Method to display student details
+    public void displayStudentDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Student Id: " + studentID);
+        System.out.println("Grade: " + grade);
     }
+}
+
+public class studentManagement{
+    public static void main(String[] args) {
+        // creating a list to store student objects
+    }
+}
+    
 
 
 
