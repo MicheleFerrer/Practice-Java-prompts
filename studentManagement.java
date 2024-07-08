@@ -30,7 +30,7 @@ method for each student to print their details.
 
 */
 import java.util.ArrayList;
- class Second {
+ class Student {
     
     //Private Instance Variables
     private String name;
@@ -38,17 +38,12 @@ import java.util.ArrayList;
     private double grade;
 
     //Constructors
-    public Second(String name, String studentID, double grade) {
+    public Student(String name, String studentID, double grade) {
         this.name = name;
         this.studentID = studentID;
         this.grade = grade;
     }
 
-    public Second(double grade, String name, String studentID) {
-        this.grade = grade;
-        this.name = name;
-        this.studentID = studentID;
-    }
     // Getter Methods
     public String getName() {
         return name;
@@ -79,14 +74,14 @@ import java.util.ArrayList;
     }
 }
 
-public class studentManagement{
+public class StudentManagement{
     public static void main(String[] args) {
         // creating a list to store student objects
-        ArrayList<Second> student = new ArrayList<>();
-        student.add(new Second("Michele", "S01", 90.5));
-        student.add(new Second("Daniela","S02", 93));
-        student.add(new Second("Isabelle", "S03", 83));
-       for (Second second : student) {
+        ArrayList<Student> students = new ArrayList<>();
+        students.add(new Student("Michele", "S01", 90.5));
+        students.add(new Student("Daniela","S02", 93));
+        students.add(new Student("Isabelle", "S03", 83));
+       for (Student student : students) {
         student.displayStudentDetails();
         System.out.println();
        }
