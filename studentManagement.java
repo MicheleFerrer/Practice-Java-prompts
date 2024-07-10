@@ -80,7 +80,7 @@ public class StudentManagement{
         ArrayList<Student> students = new ArrayList<>();
         students.add(new Student("Michele", "S01", 90.5));
         students.add(new Student("Daniela","S02", 93));
-        students.add(new Student("Isabelle", "S03", 83));
+        students.add(new Student("Isabelle", "S03", -83));
        for (Student student : students) {
         student.displayStudentDetails();
         System.out.println();
